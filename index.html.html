@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ads Page 1</title>
+	<style type="text/css">
+		*{
+			box-sizing: border-box;
+		}
+		body{
+			background-color: #EFDECD;
+		}
+		#ad,#vd,#link{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			padding: 10px;
+			border: 2px solid #dd3141;
+			background-color:black;
+			color: white;
+			flex-direction: column;
+		}
+		p,h2{
+			text-align: center;
+		}
+		#btm a{
+			 color: #000000;
+			 text-decoration: none;
+		}
+		#vd{
+			max-width: 800px;
+			width: 100%;
+			margin: auto;
+		}
+		#link{
+			display: flex;
+			flex-direction: row;
+			max-width: max-content;
+			margin: auto;
+			margin-top: 20px;
+			background-color: #45ac21;
+		}
+		#link a{
+			text-align: center;
+			background-color: #45ac21;
+			color: white;
+			padding: 10px;
+			text-decoration: none;
+		}
+		#ft{
+			text-align: center;
+			padding: 20px;
+			background-color: #EFDECD;
+		}
+		#btm{
+			position: fixed; bottom: 50px; right: 50px; width: 300px; height:50px;
+			background-color: #ffd966;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+		}
+		#close{
+			padding: 5px;
+			border: 2px solid black;
+			position: absolute;
+			color: black;
+			top: 0px;
+			right: 0px;
+		}
+		#close:hover{
+			background-color: white;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<div id="ad">
+		<div><img src="Solo_Leveling.png"></div>		
+	</div>
+		<h2>Summary</h2>
+		<p>"Solo Leveling" is a popular South Korean web novel turned manhwa that follows the journey of Sung Jin-Woo, an E-rank hunter in a world filled with monsters. After a close brush with death, he gains the unique ability to see quests, levels, and stats through an interface. Determined to grow stronger, Jin-Woo embarks on a quest to reveal his newfound power to the world. His path is paved with challenges, unveiling the world's origins, and encountering a secret society of fellow hunters. As the story unfolds, Jin-Woo faces formidable adversaries, gradually uncovering the mysteries surrounding the enigmatic "System" and the powerful "Monarchs," beings that pose a threat to humanity. The narrative climaxes in a final epic battle against the Monarchs, showcasing Jin-Woo's evolution and determination to safeguard humanity.</p>
+
+	<div id="link"><a id="btn">Click Here&nbsp;</a><span id="time"></span></div><br>
+		<a id="next" style="display:none;" herf="ads2.html"></a>
+
+	<div id="vd">
+	<video width="100%" height="auto" controls loop muted autoplay>
+	<source src="Solo Leveling.mp4" type="video/mp4">
+	</video>
+	</div>
+	<h2>Summary</h2>
+	<div><p>"Solo Leveling" is a popular South Korean web novel turned manhwa that follows the journey of Sung Jin-Woo, an E-rank hunter in a world filled with monsters. After a close brush with death, he gains the unique ability to see quests, levels, and stats through an interface. Determined to grow stronger, Jin-Woo embarks on a quest to reveal his newfound power to the world. His path is paved with challenges, unveiling the world's origins, and encountering a secret society of fellow hunters. As the story unfolds, Jin-Woo faces formidable adversaries, gradually uncovering the mysteries surrounding the enigmatic "System" and the powerful "Monarchs," beings that pose a threat to humanity. The narrative climaxes in a final epic battle against the Monarchs, showcasing Jin-Woo's evolution and determination to safeguard humanity.</p></div>
+			
+	<p id="btm"><a href="">ကြေငြာထည့်ဖို့ ဆက်သွယ်ရန်</a><span id="close">X</span></p>
+
+  <script type="text/javascript">
+  	let btn = document.getElementById("btn");
+  	let time = document.getElementById("time");
+  	let next = document.getElementById("next");
+  	let btm = document.getElementById("btm");
+  	let close = document.getElementById("close");
+  	close.onclick = function(){
+  		btm.style.display = "none";
+  	}
+  	let second = 0
+  	btn.onclick = function (e) {
+  		e.preventDefault();
+  		this.innerHTML="Please wait..."
+  	let timeid = setInterval( function () {
+  		second++;
+  		time.innerHTML=second+"s";
+  		if (second==10) {
+  			clearInterval(timeid);
+  			second=0;
+  			window.location="ads2.html"
+  		}
+  	},1000)
+  	}
+  </script>
+</body>
+
+  <footer id="ft">
+    &copy; 2023 Eternal & EM Channel.All rights reserved.
+  </footer>
+
+</html>

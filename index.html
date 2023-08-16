@@ -82,7 +82,6 @@
 		<p>"Solo Leveling" is a popular South Korean web novel turned manhwa that follows the journey of Sung Jin-Woo, an E-rank hunter in a world filled with monsters. After a close brush with death, he gains the unique ability to see quests, levels, and stats through an interface. Determined to grow stronger, Jin-Woo embarks on a quest to reveal his newfound power to the world. His path is paved with challenges, unveiling the world's origins, and encountering a secret society of fellow hunters. As the story unfolds, Jin-Woo faces formidable adversaries, gradually uncovering the mysteries surrounding the enigmatic "System" and the powerful "Monarchs," beings that pose a threat to humanity. The narrative climaxes in a final epic battle against the Monarchs, showcasing Jin-Woo's evolution and determination to safeguard humanity.</p>
 
 	<div id="link"><a id="btn">Click Here&nbsp;</a><span id="time"></span></div><br>
-		<a id="next" style="display:none;" herf="ads2.html"></a>
 
 	<div id="vd">
 	<video width="100%" height="auto" controls loop muted autoplay>
@@ -106,14 +105,14 @@
   	let second = 0
   	btn.onclick = function (e) {
   		e.preventDefault();
-  		this.innerHTML="Please wait..."
+  		this.innerHTML="Please wait&nbsp;..."
   	let timeid = setInterval( function () {
   		second++;
   		time.innerHTML=second+"s";
   		if (second==10) {
   			clearInterval(timeid);
   			second=0;
-  			window.location="ads2.html"
+  			window.location="https://www.google.com/search?q=eternal+world&rlz=1C1GCEA_enMM1032MM1032&oq=eternal+world&gs_lcrp=EgZjaHJvbWUyBggAEEUYOTIHCAEQABiABDINCAIQLhjHARjRAxiABDIHCAMQABiABDIHCAQQABiABDIGCAUQRRg8MgYIBhBFGDwyBggHEEUYPNIBCTExODgxajBqNKgCALACAA&sourceid=chrome&ie=UTF-8"
   		}
   	},1000)
   	}
